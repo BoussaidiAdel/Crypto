@@ -1,0 +1,47 @@
+# Node.js dependencies
+node_modules/
+
+# Angular build output
+/dist/
+/.tmp/
+
+# Environment files
+*.env
+*.env.local
+*.env.*.local
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+*.log
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Maven build output (Spring)
+/target/
+
+# Gradle build output (Spring)
+/build/
+
+# Eclipse project files (if applicable)
+/.project
+/.classpath
+/.settings/
+
+# IntelliJ project files (if applicable)
+/.idea/
+*.iml
+
+# JetBrains IDEs (like WebStorm)
+/*.js.map
+/*.d.ts

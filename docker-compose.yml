@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend  # Make sure you use the correct Dockerfile for the backend service
+    container_name: springboot-backend
+    ports:
+      - "8080:8080"  # Expose Spring Boot on port 8080
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend  # Make sure you use the correct Dockerfile for the frontend (Angular)
+    container_name: angular-frontend
+    ports:
+      - "80:80"  # Expose Angular on port 80
+    networks:
+      - app-network
+
+  nodeapp:
+    build:
+      context: .
+      dockerfile: Dockerfile.nodeapp  # Make sure you use the correct Dockerfile for Node.js application
+    container_name: nodejs-app
+    ports:
+      - "3000:3000"  # Expose Node.js application on port 3000
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
